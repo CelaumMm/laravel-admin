@@ -91,6 +91,18 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'host' => env('MONGO_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', 27017),
+            'database' => env('MONGO_DATABASE', 'homestead'),
+            'username' => env('MONGO_USERNAME', 'homestead'),
+            'password' => env('MONGO_PASSWORD', 'secret'),
+            'options' => [
+                'database' => env('MONGO_AUTHENTICATION_DATABASE', 'admin'), // required with Mongo 3+
+            ],
+        ],
+
     ],
 
     /*
