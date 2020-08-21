@@ -177,6 +177,9 @@ return [
 
         // PACKAGE LARAVEL PERMISSION
         Spatie\Permission\PermissionServiceProvider::class,
+
+        // PACKAGE LARAVEL COLLECTION
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -229,6 +232,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // PACKAGE LARAVEL COLLECTION
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
