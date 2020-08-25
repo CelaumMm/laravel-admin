@@ -180,6 +180,9 @@ return [
 
         // PACKAGE LARAVEL COLLECTION
         Collective\Html\HtmlServiceProvider::class,
+
+        // PACKAGE LARAVEL DEBUGBAR
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -235,6 +238,9 @@ return [
         // PACKAGE LARAVEL COLLECTION
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        // PACKAGE LARAVEL DEBUGBAR
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
