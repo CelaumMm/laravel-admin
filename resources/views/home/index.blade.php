@@ -17,11 +17,11 @@
                     <hr>
                     <h5>ADMIN</h5>
                     <h5><b>Usuario:</b> admin@admin.com</h5>
-                    <h5><b>Senha:</b> 123456</h5>
+                    <h5><b>Senha:</b> 12345678</h5>
                     <hr>
                     <h5>USER</h5>
                     <h5><b>Usuario:</b> user@user.com</h5>
-                    <h5><b>Senha:</b> 123456</h5>
+                    <h5><b>Senha:</b> 12345678</h5>
                 </div>
             </div>
         </div>
