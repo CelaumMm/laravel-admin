@@ -10,8 +10,8 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'adm
 });
 
 // perfil do usuario
-Route::get('meu-perfil', 'Admin\ProfileController@edit')->name('profile.edit');
-Route::post('meu-perfil', 'Admin\ProfileController@update')->name('profile.update');
+Route::get('profile', 'Admin\ProfileController@edit')->name('profile.edit');
+Route::post('profile', 'Admin\ProfileController@update')->name('profile.update');
 
 // fotos do perfil
 Route::put('foto-update/{id}', 'Admin\ProfileController@updateFoto')->name('profile.foto-update');
