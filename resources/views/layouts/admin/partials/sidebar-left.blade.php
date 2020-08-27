@@ -13,10 +13,14 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('vendor/admin-lte/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+                @if( !is_null(Auth::user()->avatar_id) && !empty(Auth::user()->avatar_id) && !is_null(Auth::user()->getMedia('avatar')->first() ) )
+                    <img class="img-circle elevation-2" src="{{ Auth::user()->avatar->getUrl('card') }}">
+                @else
+                    <img class="img-circle elevation-2" src="{{ asset('img/no-user.png') }}" alt="{{ auth()->user()->name }}">
+                @endif
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
             </div>
         </div>
 
