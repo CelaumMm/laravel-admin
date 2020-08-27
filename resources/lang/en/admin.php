@@ -11,7 +11,7 @@ return [
     'password' => 'Password',
     'current_password' => 'Current Password',
     'new_password' => 'Nova senha',
-    'confirm_password' => 'Confirme a senha',
+    'password_confirmation' => 'Confirme a senha',
     'image' => 'Imagem',
 
     'operations' => 'Operations',

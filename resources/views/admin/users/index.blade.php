@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 @section('title', trans('admin.users.list'))
-@section('content')
 
+@section('content')
 @include('includes.alerts')
 
 <!-- breadcrumb -->
@@ -31,15 +31,14 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="card">
+                <div class="card card-success">
                     <div class="card-header">
-                        <!-- <h3 class="card-title">Responsive Hover Table</h3> -->
+                        <!-- <h3 class="card-title">All together</h3> -->
 
                         <div class="card-tools">
-                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                            <i class="fas fa-minus"></i></button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fas fa-times"></i></button>
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
                     <div class="card-body table-responsive p-0">
@@ -77,7 +76,7 @@
                                             </form>
 
                                             <a class="btn btn-sm btn-danger" onclick="
-                                            if(confirm('{{ trans('admin.confirm') }}')){
+                                            if(confirm(`{{ trans('admin.confirm') }}`)){
                                                 event.preventDefault();
                                                 document.getElementById('delete-form-{{ $user->id }}').submit();
                                             } else {

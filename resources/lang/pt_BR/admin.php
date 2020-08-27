@@ -11,7 +11,7 @@ return [
     'password' => 'Senha',
     'current_password' => 'Senha atual',
     'new_password' => 'Nova senha',
-    'confirm_password' => 'Confirme a senha',
+    'password_confirmation' => 'Confirme a senha',
     'image' => 'Imagem',
 
     'operations' => 'Operações',
@@ -23,7 +23,7 @@ return [
 
     'user' => 'Usuário',
     'users' => 'Usuários',
-    'users.create' => 'Adicionar usuários',
+    'users.create' => 'Criar usuário',
     'users.edit' => 'Editar usuário',
     'users.delete' => 'Deletar usuário',
     'users.list' => 'Lista de usuários',
