@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,10 +77,10 @@
 
                                 @if( !is_null(Auth::user()->avatar_id) && !empty(Auth::user()->avatar_id) &&
                                 !is_null(Auth::user()->getMedia('avatar')->first() ) )
-                                <img src="{{ Auth::user()->avatar->getUrl('thumb') }}" width="50" height="50"
+                                <img src="{{ Auth::user()->avatar->getUrl('thumb') }}" width="25" height="25"
                                     alt="avatar" class="rounded-circle">
                                 @else
-                                <img src="{{ asset('img/no-user.png') }}" width="50" height="50" alt="avatar"
+                                <img src="{{ asset('img/no-user.png') }}" width="25" height="25" alt="avatar"
                                     class="rounded-circle">
                                 @endif
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -125,4 +126,5 @@
     @yield('js')
     @stack('js')
 </body>
+
 </html>
