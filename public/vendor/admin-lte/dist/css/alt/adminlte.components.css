@@ -3947,6 +3947,7 @@ textarea.form-control.is-warning {
   top: 0;
   width: 100% !important;
   z-index: 9999;
+  overflow-y: scroll;
 }
 
 .card.maximized-card.was-collapsed .card-body {

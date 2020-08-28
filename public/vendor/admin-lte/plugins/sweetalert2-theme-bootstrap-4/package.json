@@ -17,12 +17,12 @@
     "fetchSpec": "^3.1.4"
   },
   "_requiredBy": [
-    "/admin-lte"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/@sweetalert2/theme-bootstrap-4/-/theme-bootstrap-4-3.2.0.tgz",
   "_shasum": "9580fcefd7c624863e5a7cd35cb6b253e0ac8592",
   "_spec": "@sweetalert2/theme-bootstrap-4@^3.1.4",
-  "_where": "C:\\laragon\\www\\laravel-base\\node_modules\\admin-lte",
+  "_where": "C:\\laragon\\www\\laravel-base\\public\\vendor\\admin-lte",
   "author": "",
   "bugs": {
     "url": "https://github.com/sweetalert2/sweetalert2-themes/issues"

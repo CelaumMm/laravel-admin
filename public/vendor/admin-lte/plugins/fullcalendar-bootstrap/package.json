@@ -17,12 +17,12 @@
     "fetchSpec": "^4.4.0"
   },
   "_requiredBy": [
-    "/admin-lte"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/@fullcalendar/bootstrap/-/bootstrap-4.4.2.tgz",
   "_shasum": "b396aa39fd2e49c1bfb68deb677df5a5544bb924",
   "_spec": "@fullcalendar/bootstrap@^4.4.0",
-  "_where": "C:\\laragon\\www\\laravel-base\\node_modules\\admin-lte",
+  "_where": "C:\\laragon\\www\\laravel-base\\public\\vendor\\admin-lte",
   "author": {
     "name": "Adam Shaw",
     "email": "arshaw@arshaw.com",
