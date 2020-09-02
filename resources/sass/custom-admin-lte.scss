@@ -1,0 +1,8 @@
+//
+// Component: Cards
+//
+.card {
+    &.maximized-card {
+      overflow-y: scroll;
+    }
+}

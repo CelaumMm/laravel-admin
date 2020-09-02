@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/custom-admin-lte.scss', 'public/vendor/custom-admin-lte.css');
 
 mix.copy('node_modules/admin-lte/', './public/vendor/admin-lte/', false);
