@@ -180,85 +180,6 @@
 
     $container.append($navbar_variants);
 
-    // LOGO
-    $container.append('<hr class="mt-2"/><h6>LOGO</h6><hr class="mb-2"/>');
-
-    // Texto pequeno
-    var $text_sm_brand_checkbox = $("<input />", {
-        type: "checkbox",
-        value: 1,
-        checked: $(".brand-link").hasClass("text-sm"),
-        class: "mr-1"
-    }).on("click", function() {
-        if ($(this).is(":checked")) {
-            $(".brand-link").addClass("text-sm");
-        } else {
-            $(".brand-link").removeClass("text-sm");
-        }
-    });
-    var $text_sm_brand_container = $("<div />", { class: "mb-3" })
-        .append($text_sm_brand_checkbox)
-        .append("<span>Texto pequeno</span>");
-    $container.append($text_sm_brand_container);
-
-    // Cor do menu do logo
-    $container.append("<h6>Cor do menu do logo</h6>");
-    var logo_skins = navbar_all_colors;
-    var $logo_variants = $("<div />", {
-    class: "d-flex"
-    });
-    $container.append($logo_variants);
-    $container.append(
-        createSkinBlock(logo_skins, function() {
-            var color = $(this).data("color");
-            var $logo = $(".brand-link");
-            logo_skins.map(function(skin) {
-                $logo.removeClass(skin);
-            });
-
-            $logo.addClass(color);
-        })
-    );
-
-    // CORPO DA PAGINA
-    $container.append('<hr class="mt-2"/><h6>CONTEÚDO</h6><hr class="mb-2"/>');
-
-    var $text_sm_body_checkbox = $("<input />", {
-        type: "checkbox",
-        value: 1,
-        checked: $("body").hasClass("text-sm"),
-        class: "mr-1"
-    }).on("click", function() {
-        if ($(this).is(":checked")) {
-            $("body").addClass("text-sm");
-        } else {
-            $("body").removeClass("text-sm");
-        }
-    });
-    var $text_sm_body_container = $("<div />", { class: "mb-3" })
-    .append($text_sm_body_checkbox)
-    .append("<span>Texto pequeno</span>");
-    $container.append($text_sm_body_container);
-
-    // cor do conteudo
-    $container.append("<h6>Cor do conteúdo</h6>");
-    var $accent_variants = $("<div />", {
-        class: "d-flex"
-    });
-    $container.append($accent_variants);
-    $container.append(
-        createSkinBlock(accent_colors, function() {
-            var color = $(this).data("color");
-            var accent_class = color;
-            var $body = $("body");
-            accent_colors.map(function(skin) {
-                $body.removeClass(skin);
-            });
-
-            $body.addClass(accent_class);
-        })
-    );
-
     // MENU LATERAL
     $container.append('<hr class="mt-2"/><h6>MENU LATERAL</h6><hr class="mb-2"/>');
 
@@ -408,10 +329,89 @@
         })
     );
 
-  // RODAPE
-  $container.append('<hr class="mt-2"/><h6>RODAPÉ</h6><hr class="mb-2"/>');
+    // CORPO DA PAGINA
+    $container.append('<hr class="mt-2"/><h6>CONTEÚDO</h6><hr class="mb-2"/>');
 
-  // Texto pequeno
+    var $text_sm_body_checkbox = $("<input />", {
+        type: "checkbox",
+        value: 1,
+        checked: $("body").hasClass("text-sm"),
+        class: "mr-1"
+    }).on("click", function() {
+        if ($(this).is(":checked")) {
+            $("body").addClass("text-sm");
+        } else {
+            $("body").removeClass("text-sm");
+        }
+    });
+    var $text_sm_body_container = $("<div />", { class: "mb-3" })
+    .append($text_sm_body_checkbox)
+    .append("<span>Texto pequeno</span>");
+    $container.append($text_sm_body_container);
+
+    // cor do conteudo
+    $container.append("<h6>Cor do conteúdo</h6>");
+    var $accent_variants = $("<div />", {
+        class: "d-flex"
+    });
+    $container.append($accent_variants);
+    $container.append(
+        createSkinBlock(accent_colors, function() {
+            var color = $(this).data("color");
+            var accent_class = color;
+            var $body = $("body");
+            accent_colors.map(function(skin) {
+                $body.removeClass(skin);
+            });
+
+            $body.addClass(accent_class);
+        })
+    );
+
+    // LOGO
+    $container.append('<hr class="mt-2"/><h6>LOGO</h6><hr class="mb-2"/>');
+
+    // Texto pequeno
+    var $text_sm_brand_checkbox = $("<input />", {
+        type: "checkbox",
+        value: 1,
+        checked: $(".brand-link").hasClass("text-sm"),
+        class: "mr-1"
+    }).on("click", function() {
+        if ($(this).is(":checked")) {
+            $(".brand-link").addClass("text-sm");
+        } else {
+            $(".brand-link").removeClass("text-sm");
+        }
+    });
+    var $text_sm_brand_container = $("<div />", { class: "mb-3" })
+        .append($text_sm_brand_checkbox)
+        .append("<span>Texto pequeno</span>");
+    $container.append($text_sm_brand_container);
+
+    // Cor do menu do logo
+    $container.append("<h6>Cor do menu do logo</h6>");
+    var logo_skins = navbar_all_colors;
+    var $logo_variants = $("<div />", {
+    class: "d-flex"
+    });
+    $container.append($logo_variants);
+    $container.append(
+        createSkinBlock(logo_skins, function() {
+            var color = $(this).data("color");
+            var $logo = $(".brand-link");
+            logo_skins.map(function(skin) {
+                $logo.removeClass(skin);
+            });
+
+            $logo.addClass(color);
+        })
+    );
+
+    // RODAPE
+    $container.append('<hr class="mt-2"/><h6>RODAPÉ</h6><hr class="mb-2"/>');
+
+    // Texto pequeno
     var $text_sm_footer_checkbox = $("<input />", {
         type: "checkbox",
         value: 1,
@@ -428,6 +428,8 @@
         .append($text_sm_footer_checkbox)
         .append("<span>Texto pequeno</span>");
     $container.append($text_sm_footer_container);
+
+    $container.append('<hr class="mt-1"/>');
 
     // função para criar o grid das cores
     function createSkinBlock(colors, callback) {
