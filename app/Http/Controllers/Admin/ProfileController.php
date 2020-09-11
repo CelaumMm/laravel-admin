@@ -54,9 +54,8 @@ class ProfileController extends Controller
 
         $data['avatar_id'] = $user->avatar_id;
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
-
             $avatars = $user->getMedia('avatar');
-            if(count($avatars) >= 3){
+            if (count($avatars) >= 3) {
                 return redirect()
                 ->back()
                 ->with('error', 'É permitido somente 3 fotos por usuário.');
@@ -65,7 +64,7 @@ class ProfileController extends Controller
             $media = $user
                 ->addMedia($request->image)
                 ->withResponsiveImages()
-                ->sanitizingFileName(function($fileName) {
+                ->sanitizingFileName(function ($fileName) {
                     return strtolower(str_replace(['#', '/', '\\', ' '], '-', $fileName));
                 })
                 ->toMediaCollection('avatar');
@@ -119,7 +118,7 @@ class ProfileController extends Controller
         $delete = $media->delete();
         if ($delete) {
             $user = auth()->user();
-            $user->avatar_id = NULL;
+            $user->avatar_id = null;
             $user->save();
 
             return redirect()
