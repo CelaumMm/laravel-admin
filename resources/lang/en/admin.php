@@ -49,7 +49,7 @@ return [
 
     'profile.edit' => 'Edit profile',
 
-    'debugger' => 'Debugger',
+    'debug' => 'Debug',
     'member.since' => 'Member since',
     'followers' => 'Followers',
     'sales' => 'Sales',
