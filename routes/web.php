@@ -8,11 +8,11 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'adm
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/home', 'HomeController@index');
 
-    Route::get('/clear/all', 'ClearController@all')->name('clear.all');
-    Route::get('/clear/route', 'ClearController@route')->name('clear.route');
-    Route::get('/clear/config', 'ClearController@config')->name('clear.config');
-    Route::get('/clear/cache', 'ClearController@cache')->name('clear.cache');
-    Route::get('/clear/view', 'ClearController@view')->name('clear.view');
+    Route::get('/clear-all', 'ClearController@all')->name('clear.all');
+    Route::get('/clear-route', 'ClearController@route')->name('clear.route');
+    Route::get('/clear-config', 'ClearController@config')->name('clear.config');
+    Route::get('/clear-cache', 'ClearController@cache')->name('clear.cache');
+    Route::get('/clear-view', 'ClearController@view')->name('clear.view');
 });
 
 // perfil do usuario

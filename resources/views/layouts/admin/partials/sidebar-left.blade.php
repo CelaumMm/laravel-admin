@@ -23,7 +23,7 @@
                 @endif
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+                <a href="{{ route('profile.edit') }}" class="d-block">{{ auth()->user()->name }}</a>
             </div>
         </div>
 
@@ -31,16 +31,16 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{ route('admin.home') }}" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>@lang('admin.dashboard')</p>
+                    <a href="{{ route('home') }}" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <p>@lang('admin.home_page')</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link">
-                        <i class="nav-icon fas fa-home"></i>
-                        <p>@lang('admin.home_page')</p>
+                    <a href="{{ route('admin.home') }}" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>@lang('admin.dashboard')</p>
                     </a>
                 </li>
 
@@ -92,6 +92,52 @@
                             </a>
                         </li>
                         @endcan
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-broom"></i>
+                                <p>
+                                    Limpar cache
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.clear.all') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Todos</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.clear.route') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Rotas</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.clear.config') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Configurações</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.clear.cache') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Caches</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.clear.view') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Visão</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 @endcanany
